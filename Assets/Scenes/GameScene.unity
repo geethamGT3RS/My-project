@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.080251195, g: 0.1126663, b: 0.139532, a: 1}
+  m_IndirectSpecularColor: {r: 0.080693595, g: 0.11487276, b: 0.14209166, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -304,7 +304,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.523, z: -1.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -335,6 +335,90 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3695410567675980776, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410567675980776, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410567675980776, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.7403846
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410567675980776, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410567675980778, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.673
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410567843037560, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.842
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410567843037566, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410567843037566, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410567843037566, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.7403846
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410567843037566, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410568080240757, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.597
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410569220115960, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6448
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410569220115966, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410569220115966, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410569220115966, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.7403846
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410569220115966, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410569321022953, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410569321022953, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410569321022953, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.7403846
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410569321022953, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695410569321022955, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.867
+      objectReference: {fileID: 0}
     - target: {fileID: 3801606705315536990, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -379,8 +463,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hurricane_spaceship_SRP_N01_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4578425261336509156, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3695410569186324625, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+    - {fileID: 3695410568080240756, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3801606705315536990, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
       insertIndex: -1
@@ -392,6 +482,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4578425261336509156, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1827106844}
+    - targetCorrespondingSourceObject: {fileID: 4578425261336509156, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1827106846}
   m_SourcePrefab: {fileID: 100100000, guid: c998b9ca5b879cf418bfddfe2bea25c2, type: 3}
 --- !u!1 &1827106842 stripped
 GameObject:
@@ -447,6 +540,27 @@ MonoBehaviour:
   fuel: 100
   fuelBurnRate: 5
   health: 100
+--- !u!65 &1827106846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827106842}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2025518232
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,10 +593,10 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 1615077527607850472, guid: d013c4364aab6b1439a0365bba950554, type: 3}
   player: {fileID: 1827106843}
   spawnInterval: 2
-  spawnRadius: 50
-  moveSpeed: 1
+  spawnDistance: 100
+  moveSpeed: 10
   damage: 20
-  selfDestructTime: 5
+  despawnDistance: 50
 --- !u!4 &2025518234
 Transform:
   m_ObjectHideFlags: 0

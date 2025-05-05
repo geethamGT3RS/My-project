@@ -5,54 +5,58 @@ public class AsteroidController : MonoBehaviour
     public GameObject asteroidPrefab;
     public Transform player;
     public float spawnInterval = 2f;
-    public float spawnRadius = 50f;
-    public float moveSpeed = 10f;
+    public float spawnDistance = 100f;
+    public float moveSpeed = 15f;
     public float damage = 20f;
-    public float selfDestructTime = 15f;
+    public float despawnDistance = 50f;
 
-    private float nextSpawnTime = 0f;
+    private float nextSpawnTime;
 
     void Update()
     {
-        // Handle asteroid spawning based on interval
+        // Spawning new asteroid in front of the player
         if (Time.time >= nextSpawnTime)
         {
-            SpawnAsteroid();
+            SpawnAsteroidInFront();
             nextSpawnTime = Time.time + spawnInterval;
-        }
-
-        // If the asteroid is already spawned, move towards the player
-        if (player != null)
-        {
-            MoveTowardsPlayer();
         }
     }
 
-    void SpawnAsteroid()
+    void SpawnAsteroidInFront()
     {
         if (asteroidPrefab == null || player == null) return;
 
-        // Spawn asteroid at a random position around the player
-        Vector3 spawnDirection = Random.onUnitSphere;
-        Vector3 spawnPoint = player.position + spawnDirection * spawnRadius;
+        Vector3 spawnPos = player.position + player.forward * spawnDistance;
+        GameObject asteroid = Instantiate(asteroidPrefab, spawnPos, Quaternion.identity);
 
-        GameObject asteroid = Instantiate(asteroidPrefab, spawnPoint, Quaternion.identity);
-
-        // Give the asteroid movement behavior
-        AsteroidController asteroidController = asteroid.AddComponent<AsteroidController>();
-        asteroidController.player = player;
-        asteroidController.moveSpeed = moveSpeed;
-        asteroidController.damage = damage;
-        asteroidController.selfDestructTime = selfDestructTime;
+        AsteroidMovement mover = asteroid.AddComponent<AsteroidMovement>();
+        mover.player = player;
+        mover.moveSpeed = moveSpeed;
+        mover.damage = damage;
+        mover.despawnDistance = despawnDistance;
     }
+}
 
-    void MoveTowardsPlayer()
+public class AsteroidMovement : MonoBehaviour
+{
+    public Transform player;
+    public float moveSpeed = 15f;
+    public float damage = 20f;
+    public float despawnDistance = 50f;
+
+    void Update()
     {
         if (player == null) return;
 
-        // Move asteroid toward the player
-        Vector3 dir = (player.position - transform.position).normalized;
-        transform.position += dir * moveSpeed * Time.deltaTime;
+        Vector3 direction = (player.position - transform.position).normalized;
+        transform.position += direction * moveSpeed * Time.deltaTime;
+
+        // Despawn if player has passed the asteroid
+        float relativeZ = Vector3.Dot(player.forward, transform.position - player.position);
+        if (relativeZ < -despawnDistance)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -61,11 +65,9 @@ public class AsteroidController : MonoBehaviour
         {
             Rocket rocket = collision.gameObject.GetComponent<Rocket>();
             if (rocket != null)
-            {
                 rocket.TakeDamage(damage);
-            }
 
-            Destroy(gameObject); // Destroy asteroid on collision
+            Destroy(gameObject);
         }
     }
 }
